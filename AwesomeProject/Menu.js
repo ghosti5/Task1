@@ -10,30 +10,36 @@ import {
   Image,
   TouchableHighlight,
   Navigator,
+  ScrollView,
 } from 'react-native';
+import Grid from './grid';
+import Restaurant from './restaurantDetails';
 
 
-export default class Menu extends Component{
-      _navigate(name) {
-        this.props.navigator.push({
-            name: 'Menu',
-            passProps: {
-                name: name
-            }
-        })
-    }
+export default class Menu extends Component {
+  _navigate(name) {
+    this.props.navigator.push({
+      name: 'Menu',
+      passProps: {
+        name: name
+      }
+    })
+  }
   render() {
     return (
       <View style={styles.container} >
+        <TouchableHighlight style={{ width: 180, height: 20, backgroundColor: 'white' }} onPress={() => this.props.navigator.pop()}>
+          <Text style={{color:'black'}} >GO Back</Text>
+        </TouchableHighlight>
+
 
         <View style={styles.image}>
 
-          
-          <Text >Hello from {this.props.name}</Text>
-          <TouchableHighlight onPress={() => this.props.navigator.pop()}>
-            <Text >GO Back</Text>
-          </TouchableHighlight>
+          <Grid />
+
+
         </View>
+
 
         <View style={styles.button}  >
 
@@ -93,6 +99,28 @@ var styles = StyleSheet.create({
     flex: 10,
     flexDirection: 'row',
     justifyContent: 'center',
+ 
+    alignItems: 'center'
+
+  },
+  grid: {
+    flex: 5,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    borderWidth: 20,
+    borderColor: 'green',
+    alignItems: 'center',
+
+
+  },
+  subgrid: {
+
+    flexDirection: 'column',
+    justifyContent: 'center',
+    borderWidth: 20,
+    borderColor: 'green',
+    alignItems: 'center',
+
 
   },
   imageDim: {
