@@ -20,45 +20,79 @@ var Grid = React.createClass({
 
 
             <View style={{
-                flex: 1,
-                flexDirection: 'row',
+                flex: 9,
+                flexDirection: 'column',
                 justifyContent: 'flex-end',
                 alignItems: 'center',
+        
 
 
-                flexWrap: 'wrap',
-                flexShrink: 2,
+                //flexWrap: 'wrap',
+                // flexShrink: 2,
             }}>
 
+                <View style={{
+                    flex: 9,
+                    flexDirection: 'row',
+                    justifyContent: 'flex-end',
+                    alignItems: 'stretch',
+              
 
-                <View style={{ width: 180, height: 160, backgroundColor: 'white' }} >
-                    <Image source={require('./Assets/imgmenu1.png')} />
-                    <Restaurant />
+
+                }}>
+                    <View style={{ backgroundColor: 'white',  flex: 9 }} >
+                        <Image source={require('./Assets/imgmenu1.png')} />
+                        <Restaurant />
+                    </View>
+
+                    <View style={{ backgroundColor: 'white', flex: 9 }} >
+                        <Image source={require('./Assets/imgmenu2.png')} />
+                        <Restaurant />
+                    </View>
                 </View>
 
-                <View style={{ width: 175, height: 160, backgroundColor: 'white' }} >
-                    <Image source={require('./Assets/imgmenu2.png')} />
-                    <Restaurant />
+
+
+                <View style={{
+                    flex: 9,
+                    flexDirection: 'row',
+                    justifyContent: 'flex-end',
+                    alignItems: 'stretch',
+               
+
+
+                }}>
+
+                    <View style={{ backgroundColor: 'white',flex: 9, }} >
+                        <Image source={require('./Assets/imgmenu3.png')} />
+                        <Restaurant />
+                    </View>
+
+                    <View style={{ backgroundColor: 'white', flex: 9, }} >
+                        <Image source={require('./Assets/imgmenu4.png')} />
+                        <Restaurant />
+                    </View>
                 </View>
 
-                <View style={{ width: 180, height: 160, backgroundColor: 'white' }} >
-                    <Image source={require('./Assets/imgmenu3.png')} />
-                    <Restaurant />
-                </View>
 
-                <View style={{ width: 175, height: 160, backgroundColor: 'white' }} >
-                    <Image source={require('./Assets/imgmenu4.png')} />
-                    <Restaurant />
-                </View>
+                <View style={{
+                    flex: 9,
+                    flexDirection: 'row',
+                    justifyContent: 'flex-end',
+                    alignItems: 'stretch',
+             
 
-                <View style={{ width: 180, height: 160, backgroundColor: 'white' }} >
-                    <Image source={require('./Assets/imgmenu5.png')} />
-                    <Restaurant />
-                </View>
 
-                <View style={{ width: 175, height: 160, backgroundColor: 'white' }} >
-                    <Image source={require('./Assets/imgmenu6.png')} />
-                    <Restaurant />
+                }}>
+                    <View style={{ backgroundColor: 'white', flex: 9, }} >
+                        <Image source={require('./Assets/imgmenu5.png')} />
+                        <Restaurant />
+                    </View>
+
+                    <View style={{ backgroundColor: 'white', flex: 9, }} >
+                        <Image source={require('./Assets/imgmenu6.png')} />
+                        <Restaurant />
+                    </View>
                 </View>
 
             </View>

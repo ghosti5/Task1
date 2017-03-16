@@ -28,7 +28,7 @@ export default class Menu extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <TouchableHighlight style={{ width: 180, height: 20, backgroundColor: 'white' }} onPress={() => this.props.navigator.pop()}>
+        <TouchableHighlight style={{ flex:0.5,backgroundColor: 'white' }} onPress={() => this.props.navigator.pop()}>
           <Text style={{color:'black'}} >GO Back</Text>
         </TouchableHighlight>
 
@@ -99,7 +99,7 @@ var styles = StyleSheet.create({
     flex: 10,
     flexDirection: 'row',
     justifyContent: 'center',
- 
+
     alignItems: 'center'
 
   },
