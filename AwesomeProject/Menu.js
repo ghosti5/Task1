@@ -43,28 +43,24 @@ export default class Menu extends Component {
 
         <View style={styles.button}  >
 
-          <TouchableHighlight onPress={() => this._navigate('YOYOYOYOYO')}>
+          <TouchableHighlight >
             <Image source={require('./Assets/Logo.jpg')} />
           </TouchableHighlight>
 
-
-
-          <TouchableHighlight onPress={() => this._navigate('YOYOYOYOYO')} >
+          <TouchableHighlight underlayColor="white" onPress={() => this.props.navigator.pop()} >
             <Image source={require('./Assets/Home_Btn_nrm.png')} />
           </TouchableHighlight>
 
 
-          <TouchableHighlight onPress={() => this._navigate('YOYOYOYOYO')}>
+          <TouchableHighlight >
             <Image source={require('./Assets/Menu_Btn_nrm.png')} />
           </TouchableHighlight>
 
-
-
-          <TouchableHighlight onPress={() => this._navigate('YOYOYOYOYO')}>
+          <TouchableHighlight >
             <Image source={require('./Assets/Order_Btn_nrm.png')} />
           </TouchableHighlight>
 
-          <TouchableHighlight onPress={() => this._navigate('YOYOYOYOYO')}>
+          <TouchableHighlight >
             <Image source={require('./Assets/Notifi_Btn_nrm.png')} />
           </TouchableHighlight>
 
@@ -141,6 +137,7 @@ var styles = StyleSheet.create({
     paddingLeft: 35,
     justifyContent: 'center',
     fontSize: 55,
+    
 
   },
   tagHeading: {

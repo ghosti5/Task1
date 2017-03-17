@@ -9,14 +9,52 @@ import {
   Image,
   TouchableHighlight,
   Navigator,
+  // Picker,
+  // AppState,
+  // Platform,
 } from 'react-native';
 import Landing from './Landing';
 import Menu from './Menu';
-
-
+// import PushController from './PushController';
+// import PushNotification from 'react-native-push-notification';
 
 
 export default class AwesomeProject extends Component {
+
+  // constructor(props) {
+  //   super(props);
+
+  //   this.handleAppStateChange = this.handleAppStateChange.bind(this);
+  //   this.state = {
+  //     seconds: 5,
+  //   };
+  // }
+
+  // componentDidMount() {
+  //   console.log("mounted");
+  //   AppState.addEventListener('change', this.handleAppStateChange);
+  // }
+
+  // componentWillUnmount() {
+  //   console.log("un mounted");
+  //   AppState.removeEventListener('change', this.handleAppStateChange);
+  // }
+
+  // handleAppStateChange(appState) {
+  //   if (appState === 'background') {
+  //     console.log("bg");
+  //     let date = new Date(Date.now() + (this.state.seconds * 1000));
+
+  //     if (Platform.OS === 'ios') {
+  //       date = date.toISOString();
+  //     }
+
+  //     PushNotification.localNotificationSchedule({
+  //       message: "My Notification Message",
+  //       date,
+  //     });
+  //   }
+  // }
 
   renderScene(route, navigator) {
     if (route.name == 'Landing') {
@@ -28,15 +66,19 @@ export default class AwesomeProject extends Component {
   }
 
   render() {
-    return <Navigator
+    return(
+    
+    <View style={styles.container}>
+    <Navigator
       style={{ flex: 1 }}
       initialRoute={{ name: 'Landing' }}
       renderScene={this.renderScene} />
+         </View>
+      
+      ) 
 
   }
 };
-
-
 
 
 var styles = StyleSheet.create({
@@ -84,6 +126,7 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     fontSize: 55,
 
+
   },
   tagHeading: {
     color: 'white',
@@ -100,7 +143,7 @@ var styles = StyleSheet.create({
 
   }
 
- });
+});
 
 AppRegistry.registerComponent('AwesomeProject', function () {
 

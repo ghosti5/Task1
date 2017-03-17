@@ -20,8 +20,6 @@ var Restaurant = React.createClass({
                 flex: 1,
                 flexDirection: 'row',
               
-
-
             }}>
 
                 <View style={{

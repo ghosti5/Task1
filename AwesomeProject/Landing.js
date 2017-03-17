@@ -9,9 +9,13 @@ import {
     Image,
     TouchableHighlight,
     Navigator,
+    Picker,
+    AppState,
+    Platform,
 } from 'react-native';
 // import Tabs from './tabs';
-
+import PushController from './PushController';
+import PushNotification from 'react-native-push-notification';
 
 
 export default class Landing extends Component {
@@ -25,8 +29,8 @@ export default class Landing extends Component {
         })
     }
     render() {
-       return(
-               <View style={styles.container} >
+        return (
+            <View style={styles.container} >
 
                 <View style={styles.image}>
                     <Image style={styles.imageDim} source={require('./Assets/landing-page.png')}>
@@ -40,46 +44,44 @@ export default class Landing extends Component {
 
                 <View style={styles.button}  >
 
-                    <TouchableHighlight onPress={() => this._navigate('YOYOYOYOYO')}>
+                    <TouchableHighlight underlayColor="gray" >
                         <Image source={require('./Assets/Logo.jpg')} />
                     </TouchableHighlight>
 
 
 
-                    <TouchableHighlight onPress={() => this._navigate('YOYOYOYOYO')} >
+                    <TouchableHighlight underlayColor="white" onPress={() => this.props.navigator.pop()} >
                         <Image source={require('./Assets/Home_Btn_nrm.png')} />
                     </TouchableHighlight>
 
 
-                    <TouchableHighlight onPress={() => this._navigate('YOYOYOYOYO')}>
+                    <TouchableHighlight underlayColor="white" onPress={() => this._navigate('YOYOYOYOYO')}>
                         <Image source={require('./Assets/Menu_Btn_nrm.png')} />
                     </TouchableHighlight>
 
 
 
-                    <TouchableHighlight onPress={() => this._navigate('YOYOYOYOYO')}>
+                    <TouchableHighlight underlayColor="white" >
                         <Image source={require('./Assets/Order_Btn_nrm.png')} />
                     </TouchableHighlight>
 
-                    <TouchableHighlight onPress={() => this._navigate('YOYOYOYOYO')}>
+                    <TouchableHighlight underlayColor="white" >
                         <Image source={require('./Assets/Notifi_Btn_nrm.png')} />
                     </TouchableHighlight>
 
 
                 </View>
+                <PushController/>
+
 
 
             </View>
 
 
-       )
+        )
 
-           
-       
 
-          
-        
-        
+
     }
 }
 
@@ -117,8 +119,10 @@ var styles = StyleSheet.create({
         color: 'white',
         paddingLeft: 35,
         paddingTop: 175,
-        fontSize: 50,
+        fontSize: 45,
         justifyContent: 'center',
+        fontWeight: 'bold',
+
 
 
     },
@@ -126,21 +130,23 @@ var styles = StyleSheet.create({
         color: 'white',
         paddingLeft: 35,
         justifyContent: 'center',
-        fontSize: 55,
+        fontSize: 50,
+        fontWeight: 'bold',
 
     },
     tagHeading: {
         color: 'white',
         paddingLeft: 35,
+        fontWeight: 'bold',
 
-        fontSize: 20,
+        fontSize: 17,
 
     },
     tagContent: {
         color: 'white',
         paddingLeft: 35,
 
-        fontSize: 14,
+        fontSize: 12,
 
     }
 
